@@ -1,0 +1,14 @@
+<p>
+  <%= link_to 'Hello World', params.merge(hello: 'world') %>
+</p>
+
+<p>
+  <%= link_to params.merge(hello: 'world') do %>
+    <span>Hello Bug!</span>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to content_tag(:span, 'Hello Workaround'),
+    params.merge(hello: 'world') %>
+</p>
